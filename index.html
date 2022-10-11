@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+	<title>JR</title>
+
+	<script src="https://code.jquery.com/jquery-3.6.1.min.js"
+			integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ="
+			crossorigin="anonymous"></script>
+	<script src="./assets/scripts/scrollbooster.min.js"></script>
+
+	<style>
+
+		body {
+			overflow: hidden;
+		}
+
+		body, .wp-site-blocks, #site, #map-container, #map {
+			padding:0;
+			margin:0;
+			border:0;
+		}
+
+		#map-container {
+			height: 100vh;
+			overflow: hidden;
+		}
+
+		#map {
+			position: relative;
+		}
+
+		.map-btn {
+			z-index: 100;
+			position: absolute;
+			top: 350px;
+			left: 750px;
+		}
+
+		#loaderBack {
+			position: absolute;
+			top: 0;
+			left: 0;
+			background-color: white;
+			width: 100%;
+			height: 100%;
+			padding: 0;
+			margin: 0;
+			border: 0;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+
+		#loaderLogo {
+			width: 250px;
+			height: 250px;
+		}
+
+	</style>
+</head>
+
+<body>
+	<div id="site" class="lang_en">			
+		<div id="map-container">
+			<div id="map">
+				<img id="mapImg" src="./assets/images/map.gif" />
+				<a href="http://www.google.com" target="_new">
+					<img id="map-btn-1" class="map-btn" src="./assets/images/icon-bird.jpg" />
+				</a>
+			</div>
+		</div>
+	</div>
+
+	<div id="loaderBack">
+		<img id="loaderLogo" src="./assets/images/logo.png" />
+	</div>
+</body>
+
+<script type="text/javascript">
+
+var viewport = document.querySelector("#map-container")
+var content = document.querySelector("#map");
+var mapImg = document.querySelector("#mapImg");
+
+var scr = new ScrollBooster({
+  viewport: viewport,
+  content: content,
+  scrollMode: 'transform',
+  emulateScroll: false,
+  bounce: false
+});
+
+var initialDelayPassed = false;
+var fadeOutInitiated = false;
+var mapLoaded = false;
+
+setTimeout(() => {
+	initialDelayPassed = true;
+
+	if (mapLoaded) {
+		fadeOutLoader();
+	}
+}, 1000);
+
+if(mapImg.complete){
+   onImageLoaded();
+} else {
+   mapImg.onload = onImageLoaded;
+}
+
+function onImageLoaded () {
+  const offsetX = mapImg.scrollWidth - viewport.offsetWidth;
+  const offsetY = mapImg.scrollHeight - viewport.offsetHeight;
+  scr.setPosition({
+    x: offsetX / 2,
+    y: offsetY / 2
+  });
+
+  mapLoaded = true;
+
+  if (initialDelayPassed) {
+  	fadeOutLoader();
+  }
+};
+
+function fadeOutLoader () {
+	if (fadeOutInitiated) return;
+
+	fadeOutInitiated = true;
+
+	$('#loaderBack').fadeOut(400);
+	$('#loaderLogo').fadeOut(400);
+}
+
+</script>
+
+</html>
