@@ -5,6 +5,8 @@
 <head>
 	<title>JR</title>
 
+	<meta name="viewport" content="width=device-width, initial-scale=0.1">
+
 	<script src="https://code.jquery.com/jquery-3.6.1.min.js"
 			integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ="
 			crossorigin="anonymous"></script>
@@ -59,6 +61,26 @@
 			height: 250px;
 		}
 
+		#dialogHolder {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			padding: 0;
+			margin: 0;
+			border: 0;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+
+		#dialogBack {
+			background-color: white;
+			padding: 15px;
+			border-radius: 10px;
+		}
+
 	</style>
 </head>
 
@@ -67,8 +89,15 @@
 		<div id="map-container">
 			<div id="map">
 				<img id="mapImg" src="./assets/images/map.gif" />
-				<a href="http://www.google.com" target="_new">
+				<a href="#" onclick="showDialog()">
 					<img id="map-btn-1" class="map-btn" src="./assets/images/geneks-pufna.png" />
+				</a>
+			</div>
+		</div>
+		<div id="dialogHolder" onclick="hideDialog()">
+			<div id="dialogBack" onclick="dialogBlocker(event)">
+				<a href="https://www.instagram.com/p/B0DdkbYor2y/" target="_new">
+					<img class="dialog-image" id="dialogImage" src="./assets/images/geneks-thumb.png" />
 				</a>
 			</div>
 		</div>
@@ -135,15 +164,40 @@ function fadeOutLoader () {
 	$('#loaderLogo').fadeOut(400);
 }
 
+
+// dialog stuff
+
+$('#dialogHolder').hide();
+$('#dialogBack').hide();
+$('.dialogImage').hide();
+
+function showDialog() {
+	$('#dialogHolder').fadeIn(400);
+	$('#dialogBack').fadeIn(400);
+	$('.dialogImage').fadeIn(400);
+}
+
+function hideDialog() {
+	$('#dialogHolder').fadeOut(400);
+	$('#dialogBack').fadeOut(400);
+	$('.dialogImage').fadeOut(400);
+}
+
+function dialogBlocker(e) {
+	e = e || window.event;
+    e.stopPropagation();
+}
+
+
 // pulse stuff
 
 var properties = {
-               opacity : 0
-            };
+   opacity : 0
+};
 
-            var el = $('.map-btn');
+var el = $('.map-btn');
 
-            el.pulse(properties, { pulses : -1, duration : 1000 });
+el.pulse(properties, { pulses : -1, duration : 1000 });
 
 </script>
 
