@@ -9,6 +9,7 @@
 			integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ="
 			crossorigin="anonymous"></script>
 	<script src="./assets/scripts/scrollbooster.min.js"></script>
+	<script src="./assets/scripts/jquery.pulse.min.js"></script>
 
 	<style>
 
@@ -34,8 +35,8 @@
 		.map-btn {
 			z-index: 100;
 			position: absolute;
-			top: 350px;
-			left: 750px;
+			top: 1312px;
+			left: 3885px;
 		}
 
 		#loaderBack {
@@ -67,7 +68,7 @@
 			<div id="map">
 				<img id="mapImg" src="./assets/images/map.gif" />
 				<a href="http://www.google.com" target="_new">
-					<img id="map-btn-1" class="map-btn" src="./assets/images/icon-bird.jpg" />
+					<img id="map-btn-1" class="map-btn" src="./assets/images/geneks-pufna.png" />
 				</a>
 			</div>
 		</div>
@@ -133,6 +134,16 @@ function fadeOutLoader () {
 	$('#loaderBack').fadeOut(400);
 	$('#loaderLogo').fadeOut(400);
 }
+
+// pulse stuff
+
+var properties = {
+               opacity : 0
+            };
+
+            var el = $('.map-btn');
+
+            el.pulse(properties, { pulses : -1, duration : 1000 });
 
 </script>
 
