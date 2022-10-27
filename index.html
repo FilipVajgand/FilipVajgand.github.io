@@ -5,8 +5,6 @@
 <head>
 	<title>JR</title>
 
-	<meta name="viewport" content="width=device-width, initial-scale=0.1">
-
 	<script src="https://code.jquery.com/jquery-3.6.1.min.js"
 			integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ="
 			crossorigin="anonymous"></script>
@@ -37,8 +35,71 @@
 		.map-btn {
 			z-index: 100;
 			position: absolute;
-			top: 1312px;
-			left: 3885px;
+		}
+
+		#map-btn-1 {
+			top: 1340px;
+			left: 3959px;			
+		}
+
+		#map-btn-2 {
+			top: 1163px;
+			left: 3984px;			
+		}
+
+		#map-btn-3 {
+			top: 1168px;
+			left: 3904px;			
+		}
+
+		#map-btn-4 {
+			top: 1065px;
+			left: 4055px;			
+		}
+
+		#map-btn-5 {
+			top: 924px;
+			left: 3736px;			
+		}
+
+		#map-btn-6 {
+			top: 807px;
+			left: 3522px;			
+		}
+
+		#map-btn-7 {
+			top: 636px;
+			left: 3766px;			
+		}
+
+		#map-btn-8 {
+			top: 830px;
+			left: 4271px;			
+		}
+
+		#map-btn-9 {
+			top: 870px;
+			left: 4439px;			
+		}
+
+		#map-btn-10 {
+			top: 578px;
+			left: 4499px;			
+		}
+
+		#map-btn-11 {
+			top: 972px;
+			left: 4295px;			
+		}
+
+		#map-btn-12 {
+			top: 1162px;
+			left: 4335px;			
+		}
+
+		#map-btn-13 {
+			top: 755px;
+			left: 4681px;			
 		}
 
 		#loaderBack {
@@ -73,12 +134,18 @@
 			display: flex;
 			justify-content: center;
 			align-items: center;
+			background-color: #00000055;
 		}
 
 		#dialogBack {
 			background-color: white;
-			padding: 15px;
+			padding: 10px;
 			border-radius: 10px;
+		}
+
+		.dialog-image {
+			width: 200px;
+			height: 200px;
 		}
 
 	</style>
@@ -88,16 +155,163 @@
 	<div id="site" class="lang_en">			
 		<div id="map-container">
 			<div id="map">
-				<img id="mapImg" src="./assets/images/map.gif" />
-				<a href="#" onclick="showDialog()">
-					<img id="map-btn-1" class="map-btn" src="./assets/images/geneks-pufna.png" />
+				<img id="mapImg" src="./assets/images/map.png" />
+				<a href="#" onclick="showDialog(0)">
+					<img id="map-btn-1" class="map-btn" src="./assets/images/glows/01-SVETLUCAVO_0000_genex.png" />
+				</a>
+				<a href="#" onclick="showDialog(1)">
+					<img id="map-btn-2" class="map-btn" src="./assets/images/glows/01-SVETLUCAVO_0001_carina.png" />
+				</a>
+				<a href="#" onclick="showDialog(2)">
+					<img id="map-btn-3" class="map-btn" src="./assets/images/glows/01-SVETLUCAVO_0002_mikova.png" />
+				</a>
+				<a href="#" onclick="showDialog(3)">
+					<img id="map-btn-4" class="map-btn" src="./assets/images/glows/01-SVETLUCAVO_0003_maxi3.png" />
+				</a>
+				<a href="#" onclick="showDialog(4)">
+					<img id="map-btn-5" class="map-btn" src="./assets/images/glows/01-SVETLUCAVO_0004_studentska.png" />
+				</a>
+				<a href="#" onclick="showDialog(5)">
+					<img id="map-btn-6" class="map-btn" src="./assets/images/glows/01-SVETLUCAVO_0005_blok4.png" />
+				</a>
+				<a href="#" onclick="showDialog(6)">
+					<img id="map-btn-7" class="map-btn" src="./assets/images/glows/01-SVETLUCAVO_0006_deveta.png" />
+				</a>
+				<a href="#" onclick="showDialog(7)">
+					<img id="map-btn-8" class="map-btn" src="./assets/images/glows/01-SVETLUCAVO_0007_robna.png" />
+				</a>
+				<a href="#" onclick="showDialog(8)">
+					<img id="map-btn-9" class="map-btn" src="./assets/images/glows/01-SVETLUCAVO_0008_lenjin.png" />
+				</a>
+				<a href="#" onclick="showDialog(9)">
+					<img id="map-btn-10" class="map-btn" src="./assets/images/glows/01-SVETLUCAVO_0009_blok2.png" />
+				</a>
+				<a href="#" onclick="showDialog(10)">
+					<img id="map-btn-11" class="map-btn" src="./assets/images/glows/01-SVETLUCAVO_0010_fontana.png" />
+				</a>
+				<a href="#" onclick="showDialog(11)">
+					<img id="map-btn-12" class="map-btn" src="./assets/images/glows/01-SVETLUCAVO_0011_belimeda.png" />
+				</a>
+				<a href="#" onclick="showDialog(12)">
+					<img id="map-btn-13" class="map-btn" src="./assets/images/glows/01-SVETLUCAVO_0012_starimerk.png" />
+				</a>
+				<a href="#" onclick="showDialog(13)">
+					<img id="map-btn-14" class="map-btn" src="./assets/images/glows/01-SVETLUCAVO_0013_domzdravlja.png" />
+				</a>
+				<a href="#" onclick="showDialog(14)">
+					<img id="map-btn-15" class="map-btn" src="./assets/images/glows/01-SVETLUCAVO_0014_vrtić9.png" />
+				</a>
+				<a href="#" onclick="showDialog(15)">
+					<img id="map-btn-16" class="map-btn" src="./assets/images/glows/01-SVETLUCAVO_0015_hotel-jugo.png" />
+				</a>
+				<a href="#" onclick="showDialog(16)">
+					<img id="map-btn-17" class="map-btn" src="./assets/images/glows/01-SVETLUCAVO_0016_energoprojekt.png" />
+				</a>
+				<a href="#" onclick="showDialog(17)">
+					<img id="map-btn-18" class="map-btn" src="./assets/images/glows/01-SVETLUCAVO_0017_siv3.png" />
+				</a>
+				<a href="#" onclick="showDialog(18)">
+					<img id="map-btn-19" class="map-btn" src="./assets/images/glows/01-SVETLUCAVO_0018_blok30a.png" />
+				</a>
+				<a href="#" onclick="showDialog(19)">
+					<img id="map-btn-20" class="map-btn" src="./assets/images/glows/01-SVETLUCAVO_0019_blok30b.png" />
+				</a>
+				<a href="#" onclick="showDialog(20)">
+					<img id="map-btn-21" class="map-btn" src="./assets/images/glows/01-SVETLUCAVO_0020_blok30.png" />
+				</a>
+				<a href="#" onclick="showDialog(21)">
+					<img id="map-btn-22" class="map-btn" src="./assets/images/glows/01-SVETLUCAVO_0021_siv.png" />
+				</a>
+				<a href="#" onclick="showDialog(22)">
+					<img id="map-btn-23" class="map-btn" src="./assets/images/glows/01-SVETLUCAVO_0022_msu.png" />
+				</a>
+				<a href="#" onclick="showDialog(23)">
+					<img id="map-btn-24" class="map-btn" src="./assets/images/glows/01-SVETLUCAVO_0023_21.png" />
+				</a>
+				<a href="#" onclick="showDialog(24)">
+					<img id="map-btn-25" class="map-btn" src="./assets/images/glows/01-SVETLUCAVO_0024_21a.png" />
+				</a>
+				<a href="#" onclick="showDialog(25)">
+					<img id="map-btn-26" class="map-btn" src="./assets/images/glows/01-SVETLUCAVO_0025_blok37a.png" />
+				</a>
+				<a href="#" onclick="showDialog(26)">
+					<img id="map-btn-27" class="map-btn" src="./assets/images/glows/01-SVETLUCAVO_0026_blok37b.png" />
+				</a>
+				<a href="#" onclick="showDialog(27)">
+					<img id="map-btn-28" class="map-btn" src="./assets/images/glows/01-SVETLUCAVO_0027_blok38a.png" />
+				</a>
+				<a href="#" onclick="showDialog(28)">
+					<img id="map-btn-29" class="map-btn" src="./assets/images/glows/01-SVETLUCAVO_0028_blok38b.png" />
+				</a>
+				<a href="#" onclick="showDialog(29)">
+					<img id="map-btn-30" class="map-btn" src="./assets/images/glows/01-SVETLUCAVO_0029_fdu.png" />
+				</a>
+				<a href="#" onclick="showDialog(30)">
+					<img id="map-btn-31" class="map-btn" src="./assets/images/glows/01-SVETLUCAVO_0030_blok28.png" />
+				</a>
+				<a href="#" onclick="showDialog(31)">
+					<img id="map-btn-32" class="map-btn" src="./assets/images/glows/01-SVETLUCAVO_0031_televizorka.png" />
+				</a>
+				<a href="#" onclick="showDialog(32)">
+					<img id="map-btn-33" class="map-btn" src="./assets/images/glows/01-SVETLUCAVO_0032_blok23.png" />
+				</a>
+				<a href="#" onclick="showDialog(33)">
+					<img id="map-btn-34" class="map-btn" src="./assets/images/glows/01-SVETLUCAVO_0033_soliter23.png" />
+				</a>
+				<a href="#" onclick="showDialog(34)">
+					<img id="map-btn-35" class="map-btn" src="./assets/images/glows/01-SVETLUCAVO_0034_z23.png" />
+				</a>
+				<a href="#" onclick="showDialog(35)">
+					<img id="map-btn-36" class="map-btn" src="./assets/images/glows/01-SVETLUCAVO_0035_70.png" />
+				</a>
+				<a href="#" onclick="showDialog(36)">
+					<img id="map-btn-37" class="map-btn" src="./assets/images/glows/01-SVETLUCAVO_0036_70a.png" />
+				</a>
+				<a href="#" onclick="showDialog(37)">
+					<img id="map-btn-38" class="map-btn" src="./assets/images/glows/01-SVETLUCAVO_0037_44.png" />
+				</a>
+				<a href="#" onclick="showDialog(38)">
+					<img id="map-btn-39" class="map-btn" src="./assets/images/glows/01-SVETLUCAVO_0038_45mm.png" />
+				</a>
+				<a href="#" onclick="showDialog(39)">
+					<img id="map-btn-40" class="map-btn" src="./assets/images/glows/01-SVETLUCAVO_0039_45os.png" />
+				</a>
+				<a href="#" onclick="showDialog(40)">
+					<img id="map-btn-41" class="map-btn" src="./assets/images/glows/01-SVETLUCAVO_0040_45m.png" />
+				</a>
+				<a href="#" onclick="showDialog(41)">
+					<img id="map-btn-42" class="map-btn" src="./assets/images/glows/01-SVETLUCAVO_0041_45b.png" />
+				</a>
+				<a href="#" onclick="showDialog(42)">
+					<img id="map-btn-43" class="map-btn" src="./assets/images/glows/01-SVETLUCAVO_0042_45v.png" />
+				</a>
+				<a href="#" onclick="showDialog(43)">
+					<img id="map-btn-44" class="map-btn" src="./assets/images/glows/01-SVETLUCAVO_0043_72.png" />
+				</a>
+				<a href="#" onclick="showDialog(44)">
+					<img id="map-btn-45" class="map-btn" src="./assets/images/glows/01-SVETLUCAVO_0044_61.png" />
+				</a>
+				<a href="#" onclick="showDialog(45)">
+					<img id="map-btn-46" class="map-btn" src="./assets/images/glows/01-SVETLUCAVO_0045_61a-copy.png" />
+				</a>
+				<a href="#" onclick="showDialog(46)">
+					<img id="map-btn-47" class="map-btn" src="./assets/images/glows/01-SVETLUCAVO_0046_61a.png" />
+				</a>
+				<a href="#" onclick="showDialog(47)">
+					<img id="map-btn-48" class="map-btn" src="./assets/images/glows/01-SVETLUCAVO_0047_63-copy.png" />
+				</a>
+				<a href="#" onclick="showDialog(48)">
+					<img id="map-btn-49" class="map-btn" src="./assets/images/glows/01-SVETLUCAVO_0048_63.png" />
+				</a>
+				<a href="#" onclick="showDialog(49)">
+					<img id="map-btn-50" class="map-btn" src="./assets/images/glows/01-SVETLUCAVO_0049_57.png" />
 				</a>
 			</div>
 		</div>
 		<div id="dialogHolder" onclick="hideDialog()">
 			<div id="dialogBack" onclick="dialogBlocker(event)">
 				<a href="https://www.instagram.com/p/B0DdkbYor2y/" target="_new">
-					<img class="dialog-image" id="dialogImage" src="./assets/images/geneks-thumb.png" />
+					<img class="dialog-image" id="dialogImage" src="./assets/images/dialogThumbnails/geneks-thumb.png" />
 				</a>
 			</div>
 		</div>
@@ -160,8 +374,8 @@ function fadeOutLoader () {
 
 	fadeOutInitiated = true;
 
-	$('#loaderBack').fadeOut(400);
-	$('#loaderLogo').fadeOut(400);
+	$('#loaderBack').fadeOut(0);
+	$('#loaderLogo').fadeOut(0);
 }
 
 
@@ -171,7 +385,7 @@ $('#dialogHolder').hide();
 $('#dialogBack').hide();
 $('.dialogImage').hide();
 
-function showDialog() {
+function showDialog(btnIndex) {
 	$('#dialogHolder').fadeIn(400);
 	$('#dialogBack').fadeIn(400);
 	$('.dialogImage').fadeIn(400);
@@ -195,9 +409,11 @@ var properties = {
    opacity : 0
 };
 
-var el = $('.map-btn');
+for (var i = 0; i < 50; i++) {
+	var el = $('#map-btn-' + (i + 1));
 
-el.pulse(properties, { pulses : -1, duration : 1000 });
+	el.delay(Math.random() * 1000).pulse(properties, { pulses : -1, duration : 1000 });
+}
 
 </script>
 
