@@ -273,18 +273,23 @@
 		}
 
 		#map-btn-48 {
-			top: 2999px;
-			left: 1394px;			
+			top: 2876px;
+			left: 1681px;			
 		}
 
 		#map-btn-49 {
-			top: 3048px;
-			left: 1333px;			
+			top: 2863px;
+			left: 1773px;			
 		}
 
 		#map-btn-50 {
 			top: 2402px;
 			left: 1496px;			
+		}
+
+		#map-btn-51 {
+			top: 348px;
+			left: 4853px;			
 		}
 
 		#loaderBack {
@@ -491,6 +496,9 @@
 				<a href="#" onclick="showDialog(49)">
 					<img id="map-btn-50" class="map-btn" src="./assets/images/glows/01-SVETLUCAVO_0049_57.png" />
 				</a>
+				<a href="#" onclick="showDialog(50)">
+					<img id="map-btn-51" class="map-btn" src="./assets/images/glows/01-SVETLUCAVO_0050_g.png" />
+				</a>
 			</div>
 		</div>
 		<div id="dialogHolder" onclick="hideDialog()">
@@ -593,7 +601,7 @@ var properties = {
    opacity : 0
 };
 
-for (var i = 0; i < 50; i++) {
+for (var i = 0; i < 51; i++) {
 	var el = $('#map-btn-' + (i + 1));
 
 	el.delay(Math.random() * 1000).pulse(properties, { pulses : -1, duration : 1000 });
