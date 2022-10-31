@@ -329,13 +329,14 @@
 
 		#dialogBack {
 			background-color: white;
-			padding: 10px;
+			padding: 5px;
 			border-radius: 10px;
 		}
 
 		.dialog-image {
 			width: 200px;
 			height: 200px;
+			padding: 5px;
 		}
 
 	</style>
@@ -503,9 +504,14 @@
 		</div>
 		<div id="dialogHolder" onclick="hideDialog()">
 			<div id="dialogBack" onclick="dialogBlocker(event)">
-				<a href="https://www.instagram.com/p/B0DdkbYor2y/" target="_new">
-					<img class="dialog-image" id="dialogImage" src="./assets/images/dialogThumbnails/geneks-thumb.png" />
-				</a>
+				<a id="dialogImageLink1" href="https://www.instagram.com/p/B0DdkbYor2y/" target="_new">
+					<img class="dialog-image" id="dialogImage1" src="" /></a>
+				<a id="dialogImageLink2" href="https://www.instagram.com/p/B0DdkbYor2y/" target="_new">
+					<img class="dialog-image" id="dialogImage2" src="" /></a>
+				<a id="dialogImageLink3" href="https://www.instagram.com/p/B0DdkbYor2y/" target="_new">
+					<img class="dialog-image" id="dialogImage3" src="" /></a>				
+				<a id="dialogImageLink4" href="https://www.instagram.com/p/B0DdkbYor2y/" target="_new">
+					<img class="dialog-image" id="dialogImage4" src="" /></a>
 			</div>
 		</div>
 	</div>
@@ -519,6 +525,13 @@
 var viewport = document.querySelector("#map-container")
 var content = document.querySelector("#map");
 var mapImg = document.querySelector("#mapImg");
+
+const IMAGE_THUMBNAIL_PATH_PREFIX = "./assets/images/dialogThumbnails/";
+const imageThumbnails = [];
+imageThumbnails[0] = ["60 genex ozdo.jpg", "64 ggg.jpg", "78 g e ne.jpg", "53 genex nina b.jpg"];
+
+const imageThumbnailLinks = [];
+imageThumbnailLinks[0] = ["https://www.instagram.com/p/CGQCjebJfZw/?hl=en", "https://www.instagram.com/p/CHFUbrAJwM_/?hl=en", "https://www.instagram.com/p/CL7F6ncpPPt/?hl=en", "https://www.instagram.com/p/B0DdkbYor2y/?hl=en"];
 
 var scr = new ScrollBooster({
   viewport: viewport,
@@ -578,9 +591,23 @@ $('#dialogBack').hide();
 $('.dialogImage').hide();
 
 function showDialog(btnIndex) {
+	if (!imageThumbnails[btnIndex]) return;
+
 	$('#dialogHolder').fadeIn(400);
 	$('#dialogBack').fadeIn(400);
 	$('.dialogImage').fadeIn(400);
+
+	for (let i = 1; i <= 4; i++)
+	{
+		if (i <= imageThumbnails[btnIndex].length)
+		{
+			$("#dialogImageLink" + i).css("display", "inline");
+			$("#dialogImageLink" + i).attr("href", imageThumbnailLinks[btnIndex][i - 1]);
+			$("#dialogImage" + i).attr("src", IMAGE_THUMBNAIL_PATH_PREFIX + imageThumbnails[btnIndex][i - 1]);
+		} else {
+			$("#dialogImageLink" + i).css("display", "none");
+		}
+	}
 }
 
 function hideDialog() {
