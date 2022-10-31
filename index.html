@@ -527,11 +527,113 @@ var content = document.querySelector("#map");
 var mapImg = document.querySelector("#mapImg");
 
 const IMAGE_THUMBNAIL_PATH_PREFIX = "./assets/images/dialogThumbnails/";
+const DIALOG_FADE_SPEED = 250;
+
 const imageThumbnails = [];
 imageThumbnails[0] = ["60 genex ozdo.jpg", "64 ggg.jpg", "78 g e ne.jpg", "53 genex nina b.jpg"];
+imageThumbnails[1] = ["carina.jpg"];
+imageThumbnails[2] = ["10 CARINA POGLED.jpg"];
+imageThumbnails[3] = ["54 blok na dalje.jpg"];
+imageThumbnails[4] = ["студентска41розе.jpg"];
+imageThumbnails[5] = ["blok4.jpg"];
+imageThumbnails[6] = ["16d deveta1.jpg"];
+imageThumbnails[7] = ["28 fontana geneks.jpeg"];
+imageThumbnails[8] = ["23 lejnin b.jpg"];
+imageThumbnails[9] = ["20 BLOK 2.jpeg"];
+imageThumbnails[10] = ["fontana300b.jpg"];
+imageThumbnails[11] = ["15 blok1 vrtic b.jpg"];
+imageThumbnails[12] = ["57 starimerkpijaca.jpg"];
+imageThumbnails[13] = ["17 dom zdravlja b.jpg"];
+imageThumbnails[14] = ["40 vrtic ana a.jpg"];
+imageThumbnails[15] = ["52 hotelyu.jpg"];
+imageThumbnails[16] = ["97 ENERGO PROJEKT.jpg"];
+imageThumbnails[17] = ["SIV 3B.jpg"];
+imageThumbnails[18] = ["83 b30.jpg"];
+imageThumbnails[19] = ["49 blok 30.jpeg.jpeg"];
+imageThumbnails[20] = ["48 blok 30.jpg"];
+imageThumbnails[21] = ["44 SIVb.jpg", "s i v 300 boja plava.jpg"];
+imageThumbnails[22] = ["msu300b.jpg"];
+imageThumbnails[23] = ["26 BLOK 21.jpeg"];
+imageThumbnails[24] = ["47 blok 21.jpeg"];
+imageThumbnails[25] = ["blok37a.jpg"];
+imageThumbnails[26] = ["blok37b.jpeg"];
+imageThumbnails[27] = ["38 blok 38.jpg"];
+imageThumbnails[28] = ["59 b38mercddboja.jpg"];
+imageThumbnails[29] = ["67 FDU boo.jpg"];
+imageThumbnails[30] = ["19 BLOK 28.jpeg"];
+imageThumbnails[31] = ["96 TLVZR (1).jpg", "t l v z 300bbb.jpg"];
+imageThumbnails[32] = ["68 blok 23 dugaPPP.jpg"];
+imageThumbnails[33] = ["BLOK23Z 300b.jpg"];
+imageThumbnails[34] = ["21 blok 23 soliteri.jpg"];
+imageThumbnails[35] = ["37 blok 70 naja.jpg"];
+imageThumbnails[36] = ["70ayaa.JPG"];
+imageThumbnails[37] = ["11 blok 44 marko r b.jpg"];
+imageThumbnails[38] = ["45 (1).jpeg"];
+imageThumbnails[39] = ["45 (4).jpg"];
+imageThumbnails[40] = ["45 (2).jpg"];
+imageThumbnails[41] = ["45 (1).jpg"];
+imageThumbnails[42] = ["56 BLOK45 SS.jpg"];
+imageThumbnails[43] = ["b 7772.jpg"];
+imageThumbnails[44] = ["98 BLOK 61.jpg"];
+imageThumbnails[45] = ["45 (3).jpg"];
+imageThumbnails[46] = ["35 blok 61.jpg"];
+imageThumbnails[47] = ["70 blok 63.jpg"];
+imageThumbnails[48] = ["63 blok62 duzi.jpg"];
+imageThumbnails[49] = ["23 BEZANIJSKI B.jpeg"];
+imageThumbnails[50] = ["51 GRAMŠI.jpg"];
 
 const imageThumbnailLinks = [];
 imageThumbnailLinks[0] = ["https://www.instagram.com/p/CGQCjebJfZw/?hl=en", "https://www.instagram.com/p/CHFUbrAJwM_/?hl=en", "https://www.instagram.com/p/CL7F6ncpPPt/?hl=en", "https://www.instagram.com/p/B0DdkbYor2y/?hl=en"];
+imageThumbnailLinks[1] = ["https://www.instagram.com/p/Bl_MLWlnPsy/?hl=en"];
+imageThumbnailLinks[2] = ["https://www.instagram.com/p/BmG2WxAnOk4/?hl=en"];
+imageThumbnailLinks[3] = ["https://www.instagram.com/p/B3_z5RIpH7Z/?hl=en"];
+imageThumbnailLinks[4] = ["https://www.instagram.com/p/BzfxmG_IMGm/?hl=en"];
+imageThumbnailLinks[5] = ["https://www.instagram.com/p/BmEP5venP0L/?hl=en"];
+imageThumbnailLinks[6] = ["https://www.instagram.com/p/Btv59owBu6Y/?hl=en"];
+imageThumbnailLinks[7] = ["https://www.instagram.com/p/Bm-4duhASZK/?hl=en"];
+imageThumbnailLinks[8] = ["https://www.instagram.com/p/BulwKlOBUSN/?hl=en"];
+imageThumbnailLinks[9] = ["https://www.instagram.com/p/BmlpuQRAUzz/?hl=en"];
+imageThumbnailLinks[10] = ["https://www.instagram.com/p/CWoD9X1Mo-Q/?hl=en"];
+imageThumbnailLinks[11] = ["https://www.instagram.com/p/BuT7XRLhZO7/?hl=en"];
+imageThumbnailLinks[12] = ["https://www.instagram.com/p/B3w22NDJwH9/?hl=en"];
+imageThumbnailLinks[13] = ["https://www.instagram.com/p/Bt3KIn6BKCt/?hl=en"];
+imageThumbnailLinks[14] = ["https://www.instagram.com/p/BpARlBKHDVh/?hl=en"];
+imageThumbnailLinks[15] = ["https://www.instagram.com/p/BxkYVvcIjW_/?hl=en"];
+imageThumbnailLinks[16] = ["https://www.instagram.com/p/CRg3Wt9pHF2/?hl=en"];
+imageThumbnailLinks[17] = ["https://www.instagram.com/p/CS9bF2_M9AZ/?hl=en"];
+imageThumbnailLinks[18] = ["https://www.instagram.com/p/CM2UCtKJX8r/?hl=en"];
+imageThumbnailLinks[19] = ["https://www.instagram.com/p/BquzXWbAhuN/?hl=en"];
+imageThumbnailLinks[20] = ["https://www.instagram.com/p/CKMZNSTpHvF/?hl=en"];
+imageThumbnailLinks[21] = ["https://www.instagram.com/p/BppPVS_A54d/?hl=en", "https://www.instagram.com/p/CVgLfrMsEBg/?hl=en"];
+imageThumbnailLinks[22] = ["https://www.instagram.com/p/CXbi4QBMHqH/?hl=en"];
+imageThumbnailLinks[23] = ["https://www.instagram.com/p/Bm3sg3rAa9B/?hl=en"];
+imageThumbnailLinks[24] = ["https://www.instagram.com/p/BqXi5DVARGa/?hl=en"];
+imageThumbnailLinks[25] = ["https://www.instagram.com/p/BqM9NPfAuK4/?hl=en"];
+imageThumbnailLinks[26] = ["https://www.instagram.com/p/BmvrDjpAK-v/?hl=en"];
+imageThumbnailLinks[27] = ["https://www.instagram.com/p/BoeUMBIHgA9/?hl=en"];
+imageThumbnailLinks[28] = ["https://www.instagram.com/p/CGVE-E_pR3e/?hl=en"];
+imageThumbnailLinks[29] = ["https://www.instagram.com/p/CJymtgtpMN2/?hl=en"];
+imageThumbnailLinks[30] = ["https://www.instagram.com/p/Bmgi7o3AIaa/?hl=en"];
+imageThumbnailLinks[31] = ["https://www.instagram.com/p/CRWbb8_pDCf/?hl=en", "https://www.instagram.com/p/ChSMqMEsY9V/?hl=en"];
+imageThumbnailLinks[32] = ["https://www.instagram.com/p/CILnkMxpDUi/?hl=en"];
+imageThumbnailLinks[33] = ["https://www.instagram.com/p/CTM1gRJsiJN/?hl=en"];
+imageThumbnailLinks[34] = ["https://www.instagram.com/p/Bt83S5_BA1l/?hl=en"];
+imageThumbnailLinks[35] = ["https://www.instagram.com/p/Bn9LwtsH-mf/?hl=en"];
+imageThumbnailLinks[36] = ["https://www.instagram.com/p/CERKOtOp8NK/?hl=en"];
+imageThumbnailLinks[37] = ["https://www.instagram.com/p/BsN8c42ggt4/?hl=en"];
+imageThumbnailLinks[38] = ["https://www.instagram.com/p/BmApceCnNfP/?hl=en"];
+imageThumbnailLinks[39] = ["https://www.instagram.com/p/CKjhz3xJIOS/?hl=en"];
+imageThumbnailLinks[40] = ["https://www.instagram.com/p/Br7wB2MArl8/?hl=en"];
+imageThumbnailLinks[41] = ["https://www.instagram.com/p/BriPp5BA5PB/?hl=en"];
+imageThumbnailLinks[42] = ["https://www.instagram.com/p/B4zZXa-pNWr/?hl=en"];
+imageThumbnailLinks[43] = ["https://www.instagram.com/p/Cg9WFR7ssyQ/?hl=en"];
+imageThumbnailLinks[44] = ["https://www.instagram.com/p/CSZjLgPs32x/?hl=en"];
+imageThumbnailLinks[45] = ["https://www.instagram.com/p/CErnrR0Jit4/?hl=en"];
+imageThumbnailLinks[46] = ["https://www.instagram.com/p/Bnrj9pYn0s1/?hl=en"];
+imageThumbnailLinks[47] = ["https://www.instagram.com/p/CKzAfC7p2tc/?hl=en"];
+imageThumbnailLinks[48] = ["https://www.instagram.com/p/CGkhJQLpZZl/?hl=en"];
+imageThumbnailLinks[49] = ["https://www.instagram.com/p/BmiWGmqA9lo/?hl=en"];
+imageThumbnailLinks[50] = ["https://www.instagram.com/p/Buqrtp5hP9q/?hl=en"];
 
 var scr = new ScrollBooster({
   viewport: viewport,
@@ -593,9 +695,9 @@ $('.dialogImage').hide();
 function showDialog(btnIndex) {
 	if (!imageThumbnails[btnIndex]) return;
 
-	$('#dialogHolder').fadeIn(400);
-	$('#dialogBack').fadeIn(400);
-	$('.dialogImage').fadeIn(400);
+	$('#dialogHolder').fadeIn(DIALOG_FADE_SPEED);
+	$('#dialogBack').fadeIn(DIALOG_FADE_SPEED);
+	$('.dialogImage').fadeIn(DIALOG_FADE_SPEED);
 
 	for (let i = 1; i <= 4; i++)
 	{
@@ -611,9 +713,9 @@ function showDialog(btnIndex) {
 }
 
 function hideDialog() {
-	$('#dialogHolder').fadeOut(400);
-	$('#dialogBack').fadeOut(400);
-	$('.dialogImage').fadeOut(400);
+	$('#dialogHolder').fadeOut(DIALOG_FADE_SPEED);
+	$('#dialogBack').fadeOut(DIALOG_FADE_SPEED);
+	$('.dialogImage').fadeOut(DIALOG_FADE_SPEED);
 }
 
 function dialogBlocker(e) {
