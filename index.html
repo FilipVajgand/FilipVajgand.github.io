@@ -13,6 +13,21 @@
 
 	<style>
 
+
+	    @font-face {
+		    font-family: 'Myriad Pro Bold Condensed';
+		    font-style: normal;
+		    font-weight: normal;
+		    src: local('Myriad Pro Bold Condensed'), url('./assets/fonts/MYRIADPRO-BOLDCOND.woff') format('woff');
+	    }
+
+        @font-face {
+			font-family: 'Myriad Pro Condensed';
+			font-style: normal;
+			font-weight: normal;
+			src: local('Myriad Pro Condensed'), url('./assets/fonts/MYRIADPRO-COND.woff') format('woff');
+		}  
+
 		body {
 			overflow: hidden;
 		}
@@ -334,9 +349,52 @@
 		}
 
 		.dialog-image {
-			width: 200px;
-			height: 200px;
-			padding: 5px;
+			width: 210px;
+			height: 210px;
+			padding: 5px 5px 0px 5px;
+		}
+
+		#dialogCopyrightImage {
+			display: inline;
+			width: 12px;
+			height: 12px;
+			padding-right: 2px;
+		}
+
+		#dialogCopyright {
+			display: inline;
+			font-size: 6pt;
+			padding: 0;
+			margin: 0;
+			font-family: "Myriad Pro Condensed";
+		}
+
+		#dialogCopyrightHolder {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+		}
+
+		.dialogTextHolder {
+			padding-left: 5px;
+		}
+
+		.dialogTextTitle {
+			margin: 0;
+			font-family: "Myriad Pro Bold Condensed";
+			font-size: 14pt;
+			max-width: 200px;
+		}
+
+		.dialogTextDescription {
+			margin: 0;
+			font-family: "Myriad Pro Condensed";
+			color: #777;
+			font-size: 11pt;
+		}
+
+		#dialogItemsHolder {
+			display: flex;
 		}
 
 	</style>
@@ -504,14 +562,48 @@
 		</div>
 		<div id="dialogHolder" onclick="hideDialog()">
 			<div id="dialogBack" onclick="dialogBlocker(event)">
-				<a id="dialogImageLink1" href="https://www.instagram.com/p/B0DdkbYor2y/" target="_new">
-					<img class="dialog-image" id="dialogImage1" src="" /></a>
-				<a id="dialogImageLink2" href="https://www.instagram.com/p/B0DdkbYor2y/" target="_new">
-					<img class="dialog-image" id="dialogImage2" src="" /></a>
-				<a id="dialogImageLink3" href="https://www.instagram.com/p/B0DdkbYor2y/" target="_new">
-					<img class="dialog-image" id="dialogImage3" src="" /></a>				
-				<a id="dialogImageLink4" href="https://www.instagram.com/p/B0DdkbYor2y/" target="_new">
-					<img class="dialog-image" id="dialogImage4" src="" /></a>
+				<div id="dialogItemsHolder">
+					<div id="dialogItemHolder1">
+					<div class="dialogTextHolder" id="dialogTextHolder1">
+						<p class="dialogTextTitle" id="dialogTextTitle1">BLOK 1, TEST</p>
+						<p class="dialogTextDescription" id="dialogTextDescription1">Zgrada u blok 1 test</p>
+					</div>
+					<a id="dialogImageLink1" href="https://www.instagram.com/p/B0DdkbYor2y/" target="_new">
+						<img class="dialog-image" id="dialogImage1" src="" /></a><br>
+					</div>
+
+					<div id="dialogItemHolder2">
+					<div class="dialogTextHolder" id="dialogTextHolder2">
+						<p class="dialogTextTitle" id="dialogTextTitle2">BLOK 1, TEST</p>
+						<p class="dialogTextDescription" id="dialogTextDescription2">Zgrada u blok 1 test</p>
+					</div>
+					<a id="dialogImageLink2" href="https://www.instagram.com/p/B0DdkbYor2y/" target="_new">
+						<img class="dialog-image" id="dialogImage2" src="" /></a><br>
+					</div>
+
+					<div id="dialogItemHolder3">
+					<div class="dialogTextHolder" id="dialogTextHolder3">
+						<p class="dialogTextTitle" id="dialogTextTitle3">BLOK 1, TEST</p>
+						<p class="dialogTextDescription" id="dialogTextDescription3">Zgrada u blok 1 test</p>
+					</div>
+					<a id="dialogImageLink3" href="https://www.instagram.com/p/B0DdkbYor2y/" target="_new">
+						<img class="dialog-image" id="dialogImage3" src="" /></a><br>
+					</div>
+
+					<div id="dialogItemHolder4">
+					<div class="dialogTextHolder" id="dialogTextHolder4">
+						<p class="dialogTextTitle" id="dialogTextTitle4">BLOK 1, TEST</p>
+						<p class="dialogTextDescription" id="dialogTextDescription4">Zgrada u blok 1 test</p>
+					</div>
+					<a id="dialogImageLink4" href="https://www.instagram.com/p/B0DdkbYor2y/" target="_new">
+						<img class="dialog-image" id="dialogImage4" src="" /></a><br>
+					</div>
+				</div>
+				
+				<div id="dialogCopyrightHolder">
+					<img id="dialogCopyrightImage" src="./assets/images/logo.png" />
+					<p id="dialogCopyright">AUTHOR JOVANA RADUJKO I BRUTALIZAM I RENESANSA I ALL RIGHTS RESERVED ©</p>
+				</div>
 			</div>
 		</div>
 	</div>
@@ -528,59 +620,7 @@ var mapImg = document.querySelector("#mapImg");
 
 const IMAGE_THUMBNAIL_PATH_PREFIX = "./assets/images/dialogThumbnails/";
 const DIALOG_FADE_SPEED = 250;
-
-const imageThumbnails = [];
-imageThumbnails[0] = ["60 genex ozdo.jpg", "64 ggg.jpg", "78 g e ne.jpg", "53 genex nina b.jpg"];
-imageThumbnails[1] = ["carina.jpg"];
-imageThumbnails[2] = ["10 CARINA POGLED.jpg"];
-imageThumbnails[3] = ["54 blok na dalje.jpg"];
-imageThumbnails[4] = ["студентска41розе.jpg"];
-imageThumbnails[5] = ["blok4.jpg"];
-imageThumbnails[6] = ["16d deveta1.jpg"];
-imageThumbnails[7] = ["28 fontana geneks.jpeg"];
-imageThumbnails[8] = ["23 lejnin b.jpg"];
-imageThumbnails[9] = ["20 BLOK 2.jpeg"];
-imageThumbnails[10] = ["fontana300b.jpg"];
-imageThumbnails[11] = ["15 blok1 vrtic b.jpg"];
-imageThumbnails[12] = ["57 starimerkpijaca.jpg"];
-imageThumbnails[13] = ["17 dom zdravlja b.jpg"];
-imageThumbnails[14] = ["40 vrtic ana a.jpg"];
-imageThumbnails[15] = ["52 hotelyu.jpg"];
-imageThumbnails[16] = ["97 ENERGO PROJEKT.jpg"];
-imageThumbnails[17] = ["SIV 3B.jpg"];
-imageThumbnails[18] = ["83 b30.jpg"];
-imageThumbnails[19] = ["49 blok 30.jpeg.jpeg"];
-imageThumbnails[20] = ["48 blok 30.jpg"];
-imageThumbnails[21] = ["44 SIVb.jpg", "s i v 300 boja plava.jpg"];
-imageThumbnails[22] = ["msu300b.jpg"];
-imageThumbnails[23] = ["26 BLOK 21.jpeg"];
-imageThumbnails[24] = ["47 blok 21.jpeg"];
-imageThumbnails[25] = ["blok37a.jpg"];
-imageThumbnails[26] = ["blok37b.jpeg"];
-imageThumbnails[27] = ["38 blok 38.jpg"];
-imageThumbnails[28] = ["59 b38mercddboja.jpg"];
-imageThumbnails[29] = ["67 FDU boo.jpg"];
-imageThumbnails[30] = ["19 BLOK 28.jpeg"];
-imageThumbnails[31] = ["96 TLVZR (1).jpg", "t l v z 300bbb.jpg"];
-imageThumbnails[32] = ["68 blok 23 dugaPPP.jpg"];
-imageThumbnails[33] = ["BLOK23Z 300b.jpg"];
-imageThumbnails[34] = ["21 blok 23 soliteri.jpg"];
-imageThumbnails[35] = ["37 blok 70 naja.jpg"];
-imageThumbnails[36] = ["70ayaa.JPG"];
-imageThumbnails[37] = ["11 blok 44 marko r b.jpg"];
-imageThumbnails[38] = ["45 (1).jpeg"];
-imageThumbnails[39] = ["45 (4).jpg"];
-imageThumbnails[40] = ["45 (2).jpg"];
-imageThumbnails[41] = ["45 (1).jpg"];
-imageThumbnails[42] = ["56 BLOK45 SS.jpg"];
-imageThumbnails[43] = ["b 7772.jpg"];
-imageThumbnails[44] = ["98 BLOK 61.jpg"];
-imageThumbnails[45] = ["35 blok 61.jpg"];
-imageThumbnails[46] = ["45 (3).jpg"];
-imageThumbnails[47] = ["63 blok62 duzi.jpg"];
-imageThumbnails[48] = ["70 blok 63.jpg"];
-imageThumbnails[49] = ["23 BEZANIJSKI B.jpeg"];
-imageThumbnails[50] = ["51 GRAMŠI.jpg"];
+const SPLASH_FADE_SPEED = 400;
 
 const imageThumbnailLinks = [];
 imageThumbnailLinks[0] = ["https://www.instagram.com/p/CGQCjebJfZw/?hl=en", "https://www.instagram.com/p/CHFUbrAJwM_/?hl=en", "https://www.instagram.com/p/CL7F6ncpPPt/?hl=en", "https://www.instagram.com/p/B0DdkbYor2y/?hl=en"];
@@ -635,6 +675,165 @@ imageThumbnailLinks[48] = ["https://www.instagram.com/p/CGkhJQLpZZl/?hl=en"];
 imageThumbnailLinks[49] = ["https://www.instagram.com/p/BmiWGmqA9lo/?hl=en"];
 imageThumbnailLinks[50] = ["https://www.instagram.com/p/Buqrtp5hP9q/?hl=en"];
 
+const imageThumbnails = [];
+imageThumbnails[0] = ["60 genex ozdo.jpg", "64 ggg.jpg", "78 g e ne.jpg", "53 genex nina b.jpg"];
+imageThumbnails[1] = ["carina.jpg"];
+imageThumbnails[2] = ["10 CARINA POGLED.jpg"];
+imageThumbnails[3] = ["54 blok na dalje.jpg"];
+imageThumbnails[4] = ["студентска41розе.jpg"];
+imageThumbnails[5] = ["blok4.jpg"];
+imageThumbnails[6] = ["16d deveta1.jpg"];
+imageThumbnails[7] = ["28 fontana geneks.jpeg"];
+imageThumbnails[8] = ["23 lejnin b.jpg"];
+imageThumbnails[9] = ["20 BLOK 2.jpeg"];
+imageThumbnails[10] = ["fontana300b.jpg"];
+imageThumbnails[11] = ["15 blok1 vrtic b.jpg"];
+imageThumbnails[12] = ["57 starimerkpijaca.jpg"];
+imageThumbnails[13] = ["17 dom zdravlja b.jpg"];
+imageThumbnails[14] = ["40 vrtic ana a.jpg"];
+imageThumbnails[15] = ["52 hotelyu.jpg"];
+imageThumbnails[16] = ["97 ENERGO PROJEKT.jpg"];
+imageThumbnails[17] = ["SIV 3B.jpg"];
+imageThumbnails[18] = ["83 b30.jpg"];
+imageThumbnails[19] = ["49 blok 30.jpeg.jpeg"];
+imageThumbnails[20] = ["48 blok 30.jpg"];
+imageThumbnails[21] = ["44 SIVb.jpg", "s i v 300 boja plava.jpg"];
+imageThumbnails[22] = ["msu300b.jpg"];
+imageThumbnails[23] = ["26 BLOK 21.jpeg"];
+imageThumbnails[24] = ["47 blok 21.jpeg"];
+imageThumbnails[25] = ["blok37a.jpg"];
+imageThumbnails[26] = ["blok37b.jpeg"];
+imageThumbnails[27] = ["38 blok 38.jpg"];
+imageThumbnails[28] = ["59 b38mercddboja.jpg"];
+imageThumbnails[29] = ["67 FDU boo.jpg"];
+imageThumbnails[30] = ["19 BLOK 28.jpeg"];
+imageThumbnails[31] = ["96 TLVZR (1).jpg", "t l v z 300bbb.jpg"];
+imageThumbnails[32] = ["68 blok 23 dugaPPP.jpg"];
+imageThumbnails[33] = ["BLOK23Z 300b.jpg"];
+imageThumbnails[34] = ["21 blok 23 soliteri.jpg"];
+imageThumbnails[35] = ["37 blok 70 naja.jpg"];
+imageThumbnails[36] = ["70ayaa.JPG"];
+imageThumbnails[37] = ["11 blok 44 marko r b.jpg"];
+imageThumbnails[38] = ["45 (1).jpeg"];
+imageThumbnails[39] = ["45 (4).jpg"];
+imageThumbnails[40] = ["45 (2).jpg"];
+imageThumbnails[41] = ["45 (1).jpg"];
+imageThumbnails[42] = ["56 BLOK45 SS.jpg"];
+imageThumbnails[43] = ["b 7772.jpg"];
+imageThumbnails[44] = ["98 BLOK 61.jpg"];
+imageThumbnails[45] = ["35 blok 61.jpg"];
+imageThumbnails[46] = ["45 (3).jpg"];
+imageThumbnails[47] = ["63 blok62 duzi.jpg"];
+imageThumbnails[48] = ["70 blok 63.jpg"];
+imageThumbnails[49] = ["23 BEZANIJSKI B.jpeg"];
+imageThumbnails[50] = ["51 GRAMŠI.jpg"];
+
+const dialogItemTitles = [];
+dialogItemTitles[0] = ["BLOK 33, GENEKS", "BLOK 33, GENEKS", "BLOK 33, GENEKS", "BLOK 33, GENEKS"];
+dialogItemTitles[1] = ["BLOK 34, UPRAVA CARINA"];
+dialogItemTitles[2] = ["BLOK 34, POGLED IZ BLOKA 3 "];
+dialogItemTitles[3] = ["BLOK 3, POGLED KA BLOKU 30"];
+dialogItemTitles[4] = ["BLOK 3"];
+dialogItemTitles[5] = ["BLOK 4"];
+dialogItemTitles[6] = ["BLOK 5, DEVETA GIMNAZIJA"];
+dialogItemTitles[7] = ["BLOK 5, POGLED KA GENEKSU"];
+dialogItemTitles[8] = ["BLOK 2, SREDNJA TURISTIČKA ŠKOLA"];
+dialogItemTitles[9] = ["BLOK 2, SOLITERI"];
+dialogItemTitles[10] = ["BLOK 1, FONTANA"];
+dialogItemTitles[11] = ["BLOK 1, VRTIĆ"];
+dialogItemTitles[12] = ["BLOK 11C, PIJACA STARI MERKATOR"];
+dialogItemTitles[13] = ["BLOK 9A, DOM ZDRAVLJA"];
+dialogItemTitles[14] = ["BLOK 9A, VRTIĆ"];
+dialogItemTitles[15] = ["HOTEL JUGOSLAVIJA"];
+dialogItemTitles[16] = ["BLOK 11A, ENERGOPROJEKT"];
+dialogItemTitles[17] = ["BLOK 31, SIV 3 "];
+dialogItemTitles[18] = ["BLOK 30"];
+dialogItemTitles[19] = ["BLOK 30"];
+dialogItemTitles[20] = ["BLOK 30"];
+dialogItemTitles[21] = ["BLOK 13, SIV - PALATA SRBIJA", "BLOK 13, SIV - PALATA SRBIJA"];
+dialogItemTitles[22] = ["BLOK 15, MUZEJ SAVREMENE UMETNOSTI"];
+dialogItemTitles[23] = ["BLOK 21, PROLAZ "];
+dialogItemTitles[24] = ["BLOK 21"];
+dialogItemTitles[25] = ["BLOK 37 I GENEKS, POGLED SA BEŽANIJE"];
+dialogItemTitles[26] = ["BLOK 37 I GENEKS, POGLED SA BEŽANIJE"];
+dialogItemTitles[27] = ["BLOK 38"];
+dialogItemTitles[28] = ["BLOK 38, MERCEDESI"];
+dialogItemTitles[29] = ["BLOK 39, FAKULTET DRAMSKIH UMETNOSTI"];
+dialogItemTitles[30] = ["BLOK 28, POGLED KA GENEKSU"];
+dialogItemTitles[31] = ["BLOK 28, TELEVIZORKA", "BLOK 28, TELEVIZORKA"];
+dialogItemTitles[32] = ["BLOK 23"];
+dialogItemTitles[33] = ["BLOK 23, DETALJ SOLITERA"];
+dialogItemTitles[34] = ["BLOK 23, POGLED NA SOLITERE"];
+dialogItemTitles[35] = ["BLOK 70"];
+dialogItemTitles[36] = ["BLOK 70A"];
+dialogItemTitles[37] = ["BLOK 44, POGLED IZ BLOKA 45"];
+dialogItemTitles[38] = ["BLOK 45"];
+dialogItemTitles[39] = ["BLOK 45, PANORAMA"];
+dialogItemTitles[40] = ["BLOK 45"];
+dialogItemTitles[41] = ["BLOK 45, POGLED NA BLOK 61"];
+dialogItemTitles[42] = ["BLOK 45"];
+dialogItemTitles[43] = ["BLOK 71"];
+dialogItemTitles[44] = ["BLOK 61"];
+dialogItemTitles[45] = ["BLOK 61"];
+dialogItemTitles[46] = ["BLOK 61, POGLED IZ BLOKA 45"];
+dialogItemTitles[47] = ["BLOK 63"];
+dialogItemTitles[48] = ["BLOK 63"];
+dialogItemTitles[49] = ["BLOK 57, STARA BEŽANIJA"];
+dialogItemTitles[50] = ["BLOK 9A"];
+
+const dialogItemDescription = [];
+dialogItemDescription[0] = ["Narodnih heroja 41", "Narodnih heroja 41", "Narodnih heroja 41", "Narodnih heroja 41"];
+dialogItemDescription[1] = ["Bulevar Zorana Đinđića 155as"];
+dialogItemDescription[2] = ["Bulevar Zorana Đinđića 159-165"];
+dialogItemDescription[3] = ["Narodnih heroja 22-28"];
+dialogItemDescription[4] = ["Studentska 39-43"];
+dialogItemDescription[5] = ["Bulevar Zorana Đinđića 154-164"];
+dialogItemDescription[6] = ["Bulevar Maršala Tolbuhina 41"];
+dialogItemDescription[7] = ["Otona Župančiča 1"];
+dialogItemDescription[8] = ["Otona Župančiča 4"];
+dialogItemDescription[9] = ["Bulevar Mihajla Pupina 179"];
+dialogItemDescription[10] = ["Pariske komune 13"];
+dialogItemDescription[11] = ["Bulevar Zorana Đinđića 114"];
+dialogItemDescription[12] = ["Palmira Toljatija 5"];
+dialogItemDescription[13] = ["Bulevar Maršala Tolbuhina 30"];
+dialogItemDescription[14] = ["Gramšijeva 2a"];
+dialogItemDescription[15] = ["Bulevar Nikole Tesle 3"];
+dialogItemDescription[16] = ["Bulevar Mihajla Pupina 12"];
+dialogItemDescription[17] = ["Omladinskih brigada 1"];
+dialogItemDescription[18] = ["Bulevar umetnosti 3"];
+dialogItemDescription[19] = ["Bulevar Mihajla Pupina 141"];
+dialogItemDescription[20] = ["Bulevar Zorana Đinđića 80-100"];
+dialogItemDescription[21] = ["Bulevar Mihajla Pupina 2", "Bulevar Mihajla Pupina 2"];
+dialogItemDescription[22] = ["Ušće 10"];
+dialogItemDescription[23] = ["Bulevar Mihajla Pupina 111-113"];
+dialogItemDescription[24] = ["Bulevar Mihajla Pupina 13"];
+dialogItemDescription[25] = ["Bulevar Milutina Milankovića 190"];
+dialogItemDescription[26] = ["Bulevar Arsenija Čarnojevića 169"];
+dialogItemDescription[27] = ["Omladinskih brigada 38-44"];
+dialogItemDescription[28] = ["Bulevar Milutina Milankovića 130-132"];
+dialogItemDescription[29] = ["Bulevar umetnosti 20"];
+dialogItemDescription[30] = ["Bulevar umetnosti 37"];
+dialogItemDescription[31] = ["Bulevar Milutina Milankovića 94", "Bulevar Milutina Milankovića 94"];
+dialogItemDescription[32] = ["Bulevar Milutina Milankovića 36-58"];
+dialogItemDescription[33] = ["Bulevar Milutina Milankovića 32"];
+dialogItemDescription[34] = ["Ugao Bulevara Milutina Milankovića i Milentija Popovića"];
+dialogItemDescription[35] = ["Jurija Gagarina 59"];
+dialogItemDescription[36] = ["Omladinskih brigada 63"];
+dialogItemDescription[37] = ["Nehruova 103-107"];
+dialogItemDescription[38] = ["Jurija Gagarina 213"];
+dialogItemDescription[39] = ["Jurija Gagarina 195"];
+dialogItemDescription[40] = ["Nehruova 220-222"];
+dialogItemDescription[41] = ["Jurija Gagarina 235"];
+dialogItemDescription[42] = ["Jurija Gagarina 271"];
+dialogItemDescription[43] = ["Dr Ivana Ribara 188"];
+dialogItemDescription[44] = ["Jurija Gagarina 180"];
+dialogItemDescription[45] = ["Jurija Gagrina 200"];
+dialogItemDescription[46] = ["Jurija Gagarina 210"];
+dialogItemDescription[47] = ["Jurija Gagarina 50"];
+dialogItemDescription[48] = ["Jurija Gagarina 60"];
+dialogItemDescription[49] = ["Pere Segedinca 14"];
+dialogItemDescription[50] = ["Gramšijeva 2"];
+
 var scr = new ScrollBooster({
   viewport: viewport,
   content: content,
@@ -655,7 +854,7 @@ setTimeout(() => {
 	}
 }, 1000);
 
-if(mapImg.complete){
+if (mapImg.complete){
    onImageLoaded();
 } else {
    mapImg.onload = onImageLoaded;
@@ -681,10 +880,9 @@ function fadeOutLoader () {
 
 	fadeOutInitiated = true;
 
-	$('#loaderBack').fadeOut(400);
-	$('#loaderLogo').fadeOut(400);
+	$('#loaderBack').fadeOut(SPLASH_FADE_SPEED);
+	$('#loaderLogo').fadeOut(SPLASH_FADE_SPEED);
 }
-
 
 // dialog stuff
 
@@ -703,11 +901,13 @@ function showDialog(btnIndex) {
 	{
 		if (i <= imageThumbnails[btnIndex].length)
 		{
-			$("#dialogImageLink" + i).css("display", "inline");
+			$("#dialogItemHolder" + i).css("display", "inline");
 			$("#dialogImageLink" + i).attr("href", imageThumbnailLinks[btnIndex][i - 1]);
 			$("#dialogImage" + i).attr("src", IMAGE_THUMBNAIL_PATH_PREFIX + imageThumbnails[btnIndex][i - 1]);
+			$("#dialogTextTitle" + i).text(dialogItemTitles[btnIndex][i - 1]);
+			$("#dialogTextDescription" + i).text(dialogItemDescription[btnIndex][i - 1]);
 		} else {
-			$("#dialogImageLink" + i).css("display", "none");
+			$("#dialogItemHolder" + i).css("display", "none");
 		}
 	}
 }
@@ -722,7 +922,6 @@ function dialogBlocker(e) {
 	e = e || window.event;
     e.stopPropagation();
 }
-
 
 // pulse stuff
 
