@@ -5,6 +5,14 @@
 <head>
 	<title>JR</title>
 
+	<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+	<link rel="manifest" href="/site.webmanifest">
+	<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+	<meta name="msapplication-TileColor" content="#da532c">
+	<meta name="theme-color" content="#ffffff">
+
 	<script src="https://code.jquery.com/jquery-3.6.1.min.js"
 			integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ="
 			crossorigin="anonymous"></script>
@@ -45,6 +53,28 @@
 
 		#map {
 			position: relative;
+		}
+
+		#mapInitialBack {
+			position: absolute;
+			top: 0;
+			left: 0;
+			background-color: black;
+			width: 100%;
+			height: 100%;
+			padding: 0;
+			margin: 0;
+			border: 0;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+
+		#mapImgInitial {
+			position: relative;
+			left: 0;
+			top: 0;
+			height: 100vh;
 		}
 
 		.map-btn {
@@ -346,6 +376,7 @@
 			background-color: white;
 			padding: 5px;
 			border-radius: 10px;
+			box-shadow: 3px 3px 1px 1px #000;
 		}
 
 		.dialog-image {
@@ -602,10 +633,14 @@
 				
 				<div id="dialogCopyrightHolder">
 					<img id="dialogCopyrightImage" src="./assets/images/logo.png" />
-					<p id="dialogCopyright">AUTHOR JOVANA RADUJKO I BRUTALIZAM I RENESANSA I ALL RIGHTS RESERVED ©</p>
+					<p id="dialogCopyright">AUTHOR JOVANA RADUJKO <b>I</b> BRUTALIZAM I RENESANSA <b>I</b> ALL RIGHTS RESERVED ©</p>
 				</div>
 			</div>
 		</div>
+	</div>
+
+	<div id="mapInitialBack">
+		<img id="mapImgInitial" onclick="hideMapInitial()" src="./assets/images/map.png" />
 	</div>
 
 	<div id="loaderBack">
@@ -874,6 +909,12 @@ function onImageLoaded () {
   	fadeOutLoader();
   }
 };
+
+function hideMapInitial() {
+	//$('#mapImgInitial').animate({ 'height': '500vh' }, 'slow');
+	$('#mapInitialBack').fadeOut(SPLASH_FADE_SPEED);
+	$('#mapImgInitial').fadeOut(SPLASH_FADE_SPEED);
+}
 
 function fadeOutLoader () {
 	if (fadeOutInitiated) return;
