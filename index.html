@@ -597,7 +597,7 @@
 					<div id="dialogItemHolder1">
 					<div class="dialogTextHolder" id="dialogTextHolder1">
 						<p class="dialogTextTitle" id="dialogTextTitle1">BLOK 1, TEST</p>
-						<p class="dialogTextDescription" id="dialogTextDescription1">Zgrada u blok 1 test</p>
+						<a id="dialogItemMapLink1" href="#" target="_new"><p class="dialogTextDescription" id="dialogTextDescription1">Zgrada u blok 1 test</p></a>
 					</div>
 					<a id="dialogImageLink1" href="https://www.instagram.com/p/B0DdkbYor2y/" target="_new">
 						<img class="dialog-image" id="dialogImage1" src="" /></a><br>
@@ -606,7 +606,7 @@
 					<div id="dialogItemHolder2">
 					<div class="dialogTextHolder" id="dialogTextHolder2">
 						<p class="dialogTextTitle" id="dialogTextTitle2">BLOK 1, TEST</p>
-						<p class="dialogTextDescription" id="dialogTextDescription2">Zgrada u blok 1 test</p>
+						<a id="dialogItemMapLink2" href="#" target="_new"><p class="dialogTextDescription" id="dialogTextDescription2">Zgrada u blok 1 test</p></a>
 					</div>
 					<a id="dialogImageLink2" href="https://www.instagram.com/p/B0DdkbYor2y/" target="_new">
 						<img class="dialog-image" id="dialogImage2" src="" /></a><br>
@@ -615,7 +615,7 @@
 					<div id="dialogItemHolder3">
 					<div class="dialogTextHolder" id="dialogTextHolder3">
 						<p class="dialogTextTitle" id="dialogTextTitle3">BLOK 1, TEST</p>
-						<p class="dialogTextDescription" id="dialogTextDescription3">Zgrada u blok 1 test</p>
+						<a id="dialogItemMapLink3" href="#" target="_new"><p class="dialogTextDescription" id="dialogTextDescription3">Zgrada u blok 1 test</p></a>
 					</div>
 					<a id="dialogImageLink3" href="https://www.instagram.com/p/B0DdkbYor2y/" target="_new">
 						<img class="dialog-image" id="dialogImage3" src="" /></a><br>
@@ -624,7 +624,7 @@
 					<div id="dialogItemHolder4">
 					<div class="dialogTextHolder" id="dialogTextHolder4">
 						<p class="dialogTextTitle" id="dialogTextTitle4">BLOK 1, TEST</p>
-						<p class="dialogTextDescription" id="dialogTextDescription4">Zgrada u blok 1 test</p>
+						<a id="dialogItemMapLink4" href="#" target="_new"><p class="dialogTextDescription" id="dialogTextDescription4">Zgrada u blok 1 test</p></a>
 					</div>
 					<a id="dialogImageLink4" href="https://www.instagram.com/p/B0DdkbYor2y/" target="_new">
 						<img class="dialog-image" id="dialogImage4" src="" /></a><br>
@@ -709,6 +709,59 @@ imageThumbnailLinks[47] = ["https://www.instagram.com/p/CErnrR0Jit4/?hl=en"];
 imageThumbnailLinks[48] = ["https://www.instagram.com/p/CGkhJQLpZZl/?hl=en"];
 imageThumbnailLinks[49] = ["https://www.instagram.com/p/BmiWGmqA9lo/?hl=en"];
 imageThumbnailLinks[50] = ["https://www.instagram.com/p/Buqrtp5hP9q/?hl=en"];
+
+const dialogItemMapCoordinatesLink = [];
+dialogItemMapCoordinatesLink[0] = ["https://www.google.rs/maps/@44.8208014,20.4040162,3a,75y,123.18h,115.99t/data=!3m7!1e1!3m5!1sX8nBZYp1VqlVw4jQK7QBmw!2e0!6shttps:%2F%2Fstreetviewpixels-pa.googleapis.com%2Fv1%2Fthumbnail%3Fpanoid%3DX8nBZYp1VqlVw4jQK7QBmw%26cb_client%3Dmaps_sv.tactile.gps%26w%3D203%26h%3D100%26yaw%3D185.02542%26pitch%3D0%26thumbfov%3D100!7i13312!8i6656?hl=sr", "", "", ""];
+dialogItemMapCoordinatesLink[1] = ["https://www.google.rs/maps/@44.8233233,20.4055911,3a,75y,256.89h,114.23t/data=!3m6!1e1!3m4!1sadnM-8shTH0RlYyWxht6Dg!2e0!7i13312!8i6656?hl=sr"];
+dialogItemMapCoordinatesLink[2] = ["https://www.google.rs/maps/@44.8234863,20.404471,3a,75y,102.21h,122.82t/data=!3m6!1e1!3m4!1sq1ZEU85cPz029xgvu3Bltw!2e0!7i13312!8i6656?hl=sr"];
+dialogItemMapCoordinatesLink[3] = ["https://www.google.rs/maps/@44.8243094,20.4060626,3a,75y,34.76h,133.8t/data=!3m7!1e1!3m5!1sjqKA80-aXYnPDH_u7b7tJg!2e0!6shttps:%2F%2Fstreetviewpixels-pa.googleapis.com%2Fv1%2Fthumbnail%3Fpanoid%3DjqKA80-aXYnPDH_u7b7tJg%26cb_client%3Dmaps_sv.tactile.gps%26w%3D203%26h%3D100%26yaw%3D306.33527%26pitch%3D0%26thumbfov%3D100!7i13312!8i6656?hl=sr"];
+dialogItemMapCoordinatesLink[4] = ["https://www.google.rs/maps/@44.8258665,20.4021601,3a,75y,122.93h,101.79t/data=!3m7!1e1!3m5!1sXF4EmcI9en2oGhMDcG_wPw!2e0!6shttps:%2F%2Fstreetviewpixels-pa.googleapis.com%2Fv1%2Fthumbnail%3Fpanoid%3DXF4EmcI9en2oGhMDcG_wPw%26cb_client%3Dmaps_sv.tactile.gps%26w%3D203%26h%3D100%26yaw%3D143.2577%26pitch%3D0%26thumbfov%3D100!7i13312!8i6656?hl=sr"];
+dialogItemMapCoordinatesLink[5] = ["https://www.google.rs/maps/@44.8268289,20.4013332,3a,75y,257.42h,130.65t/data=!3m7!1e1!3m5!1sGI1bODKm8OKwZxzVzLzg4Q!2e0!6shttps:%2F%2Fstreetviewpixels-pa.googleapis.com%2Fv1%2Fthumbnail%3Fpanoid%3DGI1bODKm8OKwZxzVzLzg4Q%26cb_client%3Dmaps_sv.tactile.gps%26w%3D203%26h%3D100%26yaw%3D101.68121%26pitch%3D0%26thumbfov%3D100!7i13312!8i6656?hl=sr"];
+dialogItemMapCoordinatesLink[6] = ["https://www.google.rs/maps/@44.8288998,20.4022118,3a,75y,60.33h,92.58t/data=!3m6!1e1!3m4!1seOfjbOZ2PXiJQitlmjCEhg!2e0!7i13312!8i6656?hl=sr"];
+dialogItemMapCoordinatesLink[7] = ["https://www.google.rs/maps/@44.8269543,20.4086211,3a,75y,212.11h,119.6t/data=!3m7!1e1!3m5!1sddjY8ZB1HcNEKhNj1S2YhA!2e0!6shttps:%2F%2Fstreetviewpixels-pa.googleapis.com%2Fv1%2Fthumbnail%3Fpanoid%3DddjY8ZB1HcNEKhNj1S2YhA%26cb_client%3Dmaps_sv.tactile.gps%26w%3D203%26h%3D100%26yaw%3D64.88615%26pitch%3D0%26thumbfov%3D100!7i13312!8i6656?hl=sr"];
+dialogItemMapCoordinatesLink[8] = ["https://www.google.rs/maps/@44.8267835,20.410709,3a,75y,257.23h,103.78t/data=!3m6!1e1!3m4!1sV0yjLIIeH6UoWYjuWzG9JQ!2e0!7i13312!8i6656?hl=sr"];
+dialogItemMapCoordinatesLink[9] = ["https://www.google.rs/maps/@44.8303363,20.4107674,3a,49y,202.4h,105.42t/data=!3m6!1e1!3m4!1stApF7bVTySibJ1e6FKY7-w!2e0!7i13312!8i6656?hl=sr"];
+dialogItemMapCoordinatesLink[10] = ["https://www.google.rs/maps/@44.8257585,20.4093913,3a,75y,220.47h,100.51t/data=!3m7!1e1!3m5!1sioDZdDsjngnAQq3-lrM8Lg!2e0!6shttps:%2F%2Fstreetviewpixels-pa.googleapis.com%2Fv1%2Fthumbnail%3Fpanoid%3DioDZdDsjngnAQq3-lrM8Lg%26cb_client%3Dmaps_sv.tactile.gps%26w%3D203%26h%3D100%26yaw%3D352.0337%26pitch%3D0%26thumbfov%3D100!7i13312!8i6656?hl=sr"];
+dialogItemMapCoordinatesLink[11] = ["https://www.google.rs/maps/@44.8232074,20.4091026,3a,75y,354.59h,88.3t/data=!3m6!1e1!3m4!1sj-LnAltE8wHEmiSVk296Cw!2e0!7i13312!8i6656?hl=sr"];
+dialogItemMapCoordinatesLink[12] = ["https://www.google.rs/maps/@44.827633,20.4121213,3a,31.3y,42.08h,91.66t/data=!3m6!1e1!3m4!1sYcdrJAut2K5w3qymki38Hg!2e0!7i13312!8i6656?hl=sr"];
+dialogItemMapCoordinatesLink[13] = ["https://www.google.rs/maps/@44.8305761,20.4117737,3a,43.1y,7.14h,101.68t/data=!3m7!1e1!3m5!1spyp-xKzNn4nYRYiGMRCJ2g!2e0!6shttps:%2F%2Fstreetviewpixels-pa.googleapis.com%2Fv1%2Fthumbnail%3Fpanoid%3Dpyp-xKzNn4nYRYiGMRCJ2g%26cb_client%3Dmaps_sv.tactile.gps%26w%3D203%26h%3D100%26yaw%3D204.8287%26pitch%3D0%26thumbfov%3D100!7i13312!8i6656?hl=sr"];
+dialogItemMapCoordinatesLink[14] = ["https://www.google.rs/maps/@44.832457,20.4149311,3a,24.9y,273.28h,91.07t/data=!3m6!1e1!3m4!1sp9Xmqn_s2Go8aYbhuDDK_Q!2e0!7i13312!8i6656?hl=sr"];
+dialogItemMapCoordinatesLink[15] = ["https://www.google.rs/maps/@44.8293279,20.4194522,3a,75y,70.9h,93.4t/data=!3m7!1e1!3m5!1sSexU2fiE2PeLEQ_b9G3hrQ!2e0!6shttps:%2F%2Fstreetviewpixels-pa.googleapis.com%2Fv1%2Fthumbnail%3Fpanoid%3DSexU2fiE2PeLEQ_b9G3hrQ%26cb_client%3Dmaps_sv.tactile.gps%26w%3D203%26h%3D100%26yaw%3D43.115242%26pitch%3D0%26thumbfov%3D100!7i13312!8i6656?hl=sr"];
+dialogItemMapCoordinatesLink[16] = ["https://www.google.rs/maps/@44.8239772,20.4153427,3a,75y,3.88h,90.81t/data=!3m6!1e1!3m4!1sA3LpJP8BJozZpkdSVDizXA!2e0!7i13312!8i6656?hl=sr"];
+dialogItemMapCoordinatesLink[17] = ["https://www.google.rs/maps/@44.8227133,20.4132402,3a,41.2y,179.49h,103.09t/data=!3m6!1e1!3m4!1sm8vYH5G-2iuSONtGSRvChw!2e0!7i13312!8i6656?hl=sr"];
+dialogItemMapCoordinatesLink[18] = ["https://www.google.rs/maps/@44.8218287,20.418317,3a,41.2y,165.86h,108.18t/data=!3m7!1e1!3m5!1sv3UUk32J1a0o6RLj156eAA!2e0!6shttps:%2F%2Fstreetviewpixels-pa.googleapis.com%2Fv1%2Fthumbnail%3Fpanoid%3Dv3UUk32J1a0o6RLj156eAA%26cb_client%3Dmaps_sv.tactile.gps%26w%3D203%26h%3D100%26yaw%3D197.73615%26pitch%3D0%26thumbfov%3D100!7i13312!8i6656?hl=sr"];
+dialogItemMapCoordinatesLink[19] = ["https://www.google.rs/maps/@44.8210034,20.4202422,3a,39.4y,264.95h,118.87t/data=!3m7!1e1!3m5!1sMIRiVv6U1ok6NqSDmaG1fA!2e0!6shttps:%2F%2Fstreetviewpixels-pa.googleapis.com%2Fv1%2Fthumbnail%3Fpanoid%3DMIRiVv6U1ok6NqSDmaG1fA%26cb_client%3Dmaps_sv.tactile.gps%26w%3D203%26h%3D100%26yaw%3D32.231937%26pitch%3D0%26thumbfov%3D100!7i13312!8i6656?hl=sr"];
+dialogItemMapCoordinatesLink[20] = ["https://www.google.rs/maps/@44.8177114,20.4183645,3a,75y,355.56h,103.22t/data=!3m6!1e1!3m4!1sfJioxP-CKZI2iEVaT3uXRQ!2e0!7i13312!8i6656?hl=sr"];
+dialogItemMapCoordinatesLink[21] = ["https://www.google.rs/maps/@44.8185231,20.426015,3a,36y,31.92h,91.41t/data=!3m7!1e1!3m5!1sB8kwshPbGO44jtDHN1xEJw!2e0!6shttps:%2F%2Fstreetviewpixels-pa.googleapis.com%2Fv1%2Fthumbnail%3Fpanoid%3DB8kwshPbGO44jtDHN1xEJw%26cb_client%3Dmaps_sv.tactile.gps%26w%3D203%26h%3D100%26yaw%3D75.13494%26pitch%3D0%26thumbfov%3D100!7i13312!8i6656?hl=sr", ""];
+dialogItemMapCoordinatesLink[22] = ["https://www.google.rs/maps/@44.81951,20.4433077,3a,48.9y,284.22h,95.74t/data=!3m6!1e1!3m4!1stu0enefX1Av9c_Re1J9Q-w!2e0!7i13312!8i6656?hl=sr"];
+dialogItemMapCoordinatesLink[23] = ["https://www.google.rs/maps/@44.8168294,20.4295359,3a,43.1y,223.2h,96.43t/data=!3m6!1e1!3m4!1sduCXPG9PjEFxubTFwVAMuw!2e0!7i13312!8i6656?hl=sr"];
+dialogItemMapCoordinatesLink[24] = ["https://www.google.rs/maps/@44.8142207,20.4308695,3a,48.7y,71.89h,115.86t/data=!3m7!1e1!3m5!1sNOl4ccRcccOXnAQSKdxgbw!2e0!6shttps:%2F%2Fstreetviewpixels-pa.googleapis.com%2Fv1%2Fthumbnail%3Fpanoid%3DNOl4ccRcccOXnAQSKdxgbw%26cb_client%3Dmaps_sv.tactile.gps%26w%3D203%26h%3D100%26yaw%3D210.97562%26pitch%3D0%26thumbfov%3D100!7i13312!8i6656?hl=sr"];
+dialogItemMapCoordinatesLink[25] = ["https://www.google.rs/maps/@44.8200884,20.3961204,3a,75y,80.32h,99.41t/data=!3m7!1e1!3m5!1sp5OFRNq_tsRRFejxVBK9cg!2e0!6shttps:%2F%2Fstreetviewpixels-pa.googleapis.com%2Fv1%2Fthumbnail%3Fpanoid%3Dp5OFRNq_tsRRFejxVBK9cg%26cb_client%3Dmaps_sv.tactile.gps%26w%3D203%26h%3D100%26yaw%3D287.9976%26pitch%3D0%26thumbfov%3D100!7i13312!8i6656?hl=sr"];
+dialogItemMapCoordinatesLink[26] = ["https://www.google.rs/maps/@44.821215,20.4009614,3a,75y,216.66h,109.1t/data=!3m6!1e1!3m4!1sIp5LCrwx3Xi5cJ7y0c75Yg!2e0!7i13312!8i6656?hl=sr"];
+dialogItemMapCoordinatesLink[27] = ["https://www.google.rs/maps/@44.8164881,20.4061167,3a,44.9y,347.07h,111.35t/data=!3m7!1e1!3m5!1smWzFSV_VMppfnDggNnZbvQ!2e0!6shttps:%2F%2Fstreetviewpixels-pa.googleapis.com%2Fv1%2Fthumbnail%3Fpanoid%3DmWzFSV_VMppfnDggNnZbvQ%26cb_client%3Dmaps_sv.tactile.gps%26w%3D203%26h%3D100%26yaw%3D155.11229%26pitch%3D0%26thumbfov%3D100!7i13312!8i6656?hl=sr"];
+dialogItemMapCoordinatesLink[28] = ["https://www.google.rs/maps/@44.815276,20.404769,3a,34.3y,335.59h,115.71t/data=!3m7!1e1!3m5!1s3Qtmsm_rpH1hmTY1nO_iAw!2e0!6shttps:%2F%2Fstreetviewpixels-pa.googleapis.com%2Fv1%2Fthumbnail%3Fpanoid%3D3Qtmsm_rpH1hmTY1nO_iAw%26cb_client%3Dmaps_sv.tactile.gps%26w%3D203%26h%3D100%26yaw%3D77.737%26pitch%3D0%26thumbfov%3D100!7i13312!8i6656?hl=sr"];
+dialogItemMapCoordinatesLink[29] = ["https://www.google.rs/maps/@44.8146848,20.4096058,3a,75y,265.16h,94.63t/data=!3m6!1e1!3m4!1sd-OOvgQ2gjzL4gZXm__YOA!2e0!7i13312!8i6656?hl=sr"];
+dialogItemMapCoordinatesLink[30] = ["https://www.google.rs/maps/@44.8136184,20.4117722,3a,75y,252.57h,129.63t/data=!3m7!1e1!3m5!1sZyK-SRV-FuiqSTxNNgMXGQ!2e0!6shttps:%2F%2Fstreetviewpixels-pa.googleapis.com%2Fv1%2Fthumbnail%3Fpanoid%3DZyK-SRV-FuiqSTxNNgMXGQ%26cb_client%3Dmaps_sv.tactile.gps%26w%3D203%26h%3D100%26yaw%3D184.54637%26pitch%3D0%26thumbfov%3D100!7i13312!8i6656?hl=sr"];
+dialogItemMapCoordinatesLink[31] = ["https://www.google.rs/maps/@44.8112655,20.4159785,3a,75y,238.91h,119.64t/data=!3m7!1e1!3m5!1sraG4ynkVhDyLCD6Wgjg8bg!2e0!6shttps:%2F%2Fstreetviewpixels-pa.googleapis.com%2Fv1%2Fthumbnail%3Fpanoid%3DraG4ynkVhDyLCD6Wgjg8bg%26cb_client%3Dmaps_sv.tactile.gps%26w%3D203%26h%3D100%26yaw%3D84.915375%26pitch%3D0%26thumbfov%3D100!7i13312!8i6656?hl=sr", ""];
+dialogItemMapCoordinatesLink[32] = ["https://www.google.rs/maps/@44.8070828,20.4231755,3a,75y,341.36h,113.91t/data=!3m6!1e1!3m4!1sNYNbfEaJKBwC08uMRT4JFw!2e0!7i13312!8i6656?hl=sr"];
+dialogItemMapCoordinatesLink[33] = ["https://www.google.rs/maps/@44.8068509,20.4259034,3a,75y,239.41h,138.61t/data=!3m7!1e1!3m5!1scdABZSW5fQWTcSs_uyI3cA!2e0!6shttps:%2F%2Fstreetviewpixels-pa.googleapis.com%2Fv1%2Fthumbnail%3Fpanoid%3DcdABZSW5fQWTcSs_uyI3cA%26cb_client%3Dmaps_sv.tactile.gps%26w%3D203%26h%3D100%26yaw%3D287.65%26pitch%3D0%26thumbfov%3D100!7i13312!8i6656?hl=sr"];
+dialogItemMapCoordinatesLink[34] = ["https://www.google.rs/maps/@44.8069034,20.4258084,3a,75y,33.85h,117.03t/data=!3m6!1e1!3m4!1s4izgWJkmexYa2DbG6fjHyw!2e0!7i13312!8i6656?hl=sr"];
+dialogItemMapCoordinatesLink[35] = ["https://www.google.rs/maps/@44.8029028,20.396966,3a,75y,181.02h,99.48t/data=!3m7!1e1!3m5!1sw5A6wAVHJFMgZXwnRD2F3w!2e0!6shttps:%2F%2Fstreetviewpixels-pa.googleapis.com%2Fv1%2Fthumbnail%3Fpanoid%3Dw5A6wAVHJFMgZXwnRD2F3w%26cb_client%3Dmaps_sv.tactile.gps%26w%3D203%26h%3D100%26yaw%3D142.9189%26pitch%3D0%26thumbfov%3D100!7i13312!8i6656?hl=sr"];
+dialogItemMapCoordinatesLink[36] = ["https://www.google.rs/maps/@44.800206,20.4005087,3a,75y,112.88h,103.36t/data=!3m6!1e1!3m4!1sh1reQx_ORksn79Dx8a81wQ!2e0!7i13312!8i6656?hl=sr"];
+dialogItemMapCoordinatesLink[37] = ["https://www.google.rs/maps/@44.7973907,20.3843184,3a,75y,34.98h,99.07t/data=!3m6!1e1!3m4!1stXlkhpKgrM1uJdIXGeKmOg!2e0!7i13312!8i6656?hl=sr"];
+dialogItemMapCoordinatesLink[38] = ["https://www.google.rs/maps/@44.7983393,20.3780982,3a,75y,226.96h,139.63t/data=!3m7!1e1!3m5!1s0UyfRIU0XbuwDnqRjmHDkg!2e0!6shttps:%2F%2Fstreetviewpixels-pa.googleapis.com%2Fv1%2Fthumbnail%3Fpanoid%3D0UyfRIU0XbuwDnqRjmHDkg%26cb_client%3Dmaps_sv.tactile.gps%26w%3D203%26h%3D100%26yaw%3D100.208694%26pitch%3D0%26thumbfov%3D100!7i13312!8i6656?hl=sr"];
+dialogItemMapCoordinatesLink[39] = ["https://www.google.rs/maps/@44.7986162,20.3792673,3a,75y,182.16h,100.68t/data=!3m7!1e1!3m5!1sqkeO9phmfveJarRvQwWK6w!2e0!6shttps:%2F%2Fstreetviewpixels-pa.googleapis.com%2Fv1%2Fthumbnail%3Fpanoid%3DqkeO9phmfveJarRvQwWK6w%26cb_client%3Dmaps_sv.tactile.gps%26w%3D203%26h%3D100%26yaw%3D78.99195%26pitch%3D0%26thumbfov%3D100!7i13312!8i6656?hl=sr"];
+dialogItemMapCoordinatesLink[40] = ["https://www.google.rs/maps/@44.7944901,20.3800277,3a,75y,310.99h,118.03t/data=!3m6!1e1!3m4!1sgIwzdijEk7ivJzUWfbq38Q!2e0!7i13312!8i6656?hl=sr"];
+dialogItemMapCoordinatesLink[41] = ["https://www.google.rs/maps/@44.798426,20.376203,3a,75y,315.68h,114.96t/data=!3m7!1e1!3m5!1sY5268PPnkVutZZBjtKsAyw!2e0!6shttps:%2F%2Fstreetviewpixels-pa.googleapis.com%2Fv1%2Fthumbnail%3Fpanoid%3DY5268PPnkVutZZBjtKsAyw%26cb_client%3Dmaps_sv.tactile.gps%26w%3D203%26h%3D100%26yaw%3D332.57898%26pitch%3D0%26thumbfov%3D100!7i13312!8i6656?hl=sr"];
+dialogItemMapCoordinatesLink[42] = ["https://www.google.rs/maps/@44.7963083,20.3725437,3a,75y,46.45h,115.72t/data=!3m7!1e1!3m5!1schjdg3zUOZPUstfrKfFVXQ!2e0!6shttps:%2F%2Fstreetviewpixels-pa.googleapis.com%2Fv1%2Fthumbnail%3Fpanoid%3Dchjdg3zUOZPUstfrKfFVXQ%26cb_client%3Dmaps_sv.tactile.gps%26w%3D203%26h%3D100%26yaw%3D160.81104%26pitch%3D0%26thumbfov%3D100!7i13312!8i6656?hl=sr"];
+dialogItemMapCoordinatesLink[43] = ["https://www.google.rs/maps/@44.7932628,20.3716802,3a,75y,84.24h,106.51t/data=!3m7!1e1!3m5!1sBdIR44H3qVz-ez9e5bIcyQ!2e0!6shttps:%2F%2Fstreetviewpixels-pa.googleapis.com%2Fv1%2Fthumbnail%3Fpanoid%3DBdIR44H3qVz-ez9e5bIcyQ%26cb_client%3Dmaps_sv.tactile.gps%26w%3D203%26h%3D100%26yaw%3D4.4941425%26pitch%3D0%26thumbfov%3D100!7i13312!8i6656?hl=sr"];
+dialogItemMapCoordinatesLink[44] = ["https://www.google.rs/maps/@44.7992214,20.3739451,3a,43.5y,346.81h,100.07t/data=!3m6!1e1!3m4!1sdAWl00MhLLb9pJVn_so2AQ!2e0!7i13312!8i6656?hl=sr"];
+dialogItemMapCoordinatesLink[45] = ["https://www.google.rs/maps/@44.7991677,20.3720488,3a,60y,7.22h,114.16t/data=!3m6!1e1!3m4!1sNtEdDvoRyeprGZRKkqXlMA!2e0!7i13312!8i6656?hl=sr"];
+dialogItemMapCoordinatesLink[46] = ["https://www.google.rs/maps/@44.7982762,20.3719054,3a,32.8y,337.06h,95.39t/data=!3m6!1e1!3m4!1sXcdY1kEu7vxMOk5f3iXbTQ!2e0!7i13312!8i6656?hl=sr"];
+dialogItemMapCoordinatesLink[47] = ["https://www.google.rs/maps/@44.8045767,20.3796646,3a,75y,105.08h,124.69t/data=!3m6!1e1!3m4!1svlXXlGYgrPb335oPXL9BVA!2e0!7i13312!8i6656?hl=sr"];
+dialogItemMapCoordinatesLink[48] = ["https://www.google.rs/maps/@44.8041214,20.3809601,3a,75y,71.22h,143.36t/data=!3m6!1e1!3m4!1seu2GN55AM4q-a3taTRzajw!2e0!7i13312!8i6656?hl=sr"];
+dialogItemMapCoordinatesLink[49] = ["https://www.google.rs/maps/@44.8091255,20.3778526,3a,60y,32.95h,127.81t/data=!3m6!1e1!3m4!1svDzQ5u4mqb5oykvLHGFnAA!2e0!7i13312!8i6656?hl=sr"];
+dialogItemMapCoordinatesLink[50] = ["https://www.google.rs/maps/@44.8315926,20.4149966,3a,44.9y,312.7h,140.2t/data=!3m6!1e1!3m4!1siXWc1p_kmndCQhuy1K7Kyg!2e0!7i13312!8i6656?hl=sr"];
 
 const imageThumbnails = [];
 imageThumbnails[0] = ["60 genex ozdo.jpg", "64 ggg.jpg", "78 g e ne.jpg", "53 genex nina b.jpg"];
@@ -947,6 +1000,12 @@ function showDialog(btnIndex) {
 			$("#dialogImage" + i).attr("src", IMAGE_THUMBNAIL_PATH_PREFIX + imageThumbnails[btnIndex][i - 1]);
 			$("#dialogTextTitle" + i).text(dialogItemTitles[btnIndex][i - 1]);
 			$("#dialogTextDescription" + i).text(dialogItemDescription[btnIndex][i - 1]);
+
+			if (dialogItemDescription[btnIndex][i - 1] != " ") {
+				$("#dialogItemMapLink" + i).attr("href", dialogItemMapCoordinatesLink[btnIndex][i - 1]);
+			} else {
+				$("#dialogItemMapLink" + i).removeAttr('href');
+			}
 		} else {
 			$("#dialogItemHolder" + i).css("display", "none");
 		}
