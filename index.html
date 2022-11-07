@@ -77,6 +77,74 @@
 			height: 100vh;
 		}
 
+		#mapTitleText {
+			position: absolute;
+			top: 0;
+			left: 110px;
+			font-size: 50pt;
+			margin: 0;
+			font-family: "Myriad Pro Bold Condensed";
+		}
+
+		.navItem {
+			color: white;
+			cursor: pointer;
+		}
+
+		.navItem:hover {
+			color: black;
+		}
+
+		.navItemSeparator {
+			font-family: "Myriad Pro Bold Condensed";	
+		}
+
+		#navItems {
+			font-family: "Myriad Pro Condensed";
+			position: absolute;
+			top: 30px;
+			left: 397px;
+			font-size: 26pt;
+		}
+
+		#mapBackBtn {
+			cursor: pointer;
+			position: absolute;
+			top: 5px;
+			left: 5px;
+			width: 100px;
+			height: 100px;
+		}
+
+		#aboutHolder {
+			position: absolute;
+			top: 0;
+			left: -483px;
+			height: 100vh;
+			width: 478px;
+			border-right: 5px solid #CCC;
+			background-color: white;
+			color: black;
+		}
+
+		#aboutTitle {
+			font-family: "Myriad Pro Condensed";
+			font-size: 26pt;
+			position: relative;
+			left: 395px; 
+			top: 36px;
+			pointer-events: none;
+		}
+
+		.aboutText {
+			font-family: "Myriad Pro Condensed";
+			font-size: 10pt;
+			padding: 25px;
+			padding-top: 5px;
+			padding-bottom: 0;
+			text-align: justify;
+		}
+
 		.map-btn {
 			z-index: 100;
 			position: absolute;
@@ -590,7 +658,10 @@
 					<img id="map-btn-51" class="map-btn" src="./assets/images/glows/01-SVETLUCAVO_0050_g.png" />
 				</a>
 			</div>
+
+				<img id="mapBackBtn" onclick="backToMapInitial()" src="./assets/images/back.png" />
 		</div>
+
 		<div id="dialogHolder" onclick="hideDialog()">
 			<div id="dialogBack" onclick="dialogBlocker(event)">
 				<div id="dialogItemsHolder">
@@ -640,7 +711,18 @@
 	</div>
 
 	<div id="mapInitialBack">
-		<img id="mapImgInitial" onclick="hideMapInitial()" src="./assets/images/map.png" />
+		<img id="mapImgInitial" onclick="hideAbout()" src="./assets/images/map.png" />
+		<h1 id="mapTitleText">NEW BELGRADE MAP</h1>
+		<p id="navItems"><span class="navItem" onclick="showAbout()">ABOUT</span><span class="navItemSeparator"><b> | </b></span><span class="navItem" onclick="hideMapInitial()">EXPLORE</span></p>
+		<div id="aboutHolder">
+			<h2 id="aboutTitle">ABOUT</h2>
+			<br>
+			<p class="aboutText">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ultricies malesuada magna a congue. Suspendisse ac nunc ac mauris malesuada auctor. Etiam tellus arcu, facilisis cursus mauris a, eleifend semper purus. Sed lacinia diam id urna aliquam, hendrerit ultrices ante dignissim. Nulla tincidunt felis vel nulla aliquam, sit amet finibus risus viverra. Nunc non elementum ex. Ut ac purus ultricies, vehicula libero et, fringilla mauris. Duis eu ex risus. Ut in interdum lectus. Curabitur imperdiet mauris ac risus varius mattis. In finibus nec ante vel suscipit. Duis sed lectus tempor, auctor sem quis, vestibulum massa. Vestibulum ullamcorper diam eget porta malesuada. Proin feugiat, justo id euismod porttitor, massa tortor condimentum magna, vitae finibus eros sem cursus ipsum.</p>
+<p class="aboutText">Donec vulputate sodales pretium. Phasellus vitae nisl sed eros dictum tempus ut vitae nibh. Curabitur cursus varius dolor, eget consequat mi laoreet vel. Quisque ante orci, pretium vitae quam quis, euismod tempor nibh. Suspendisse nec urna convallis, congue urna sed, scelerisque magna. Sed tincidunt tortor maximus quam tincidunt, ac mollis ligula finibus. Nullam justo sapien, placerat non faucibus eu, elementum at massa. Nunc iaculis lobortis augue, tristique congue mi pellentesque ac. Aenean et felis sed justo euismod lobortis sed ut dolor.</p>
+<p class="aboutText">Interdum et malesuada fames ac ante ipsum primis in faucibus. Aenean rhoncus porttitor lectus sed pretium. Quisque in tempor sapien, nec varius risus. Morbi ut odio lacus. Sed feugiat erat magna, vitae laoreet felis scelerisque eu. Nulla facilisi. Aliquam erat volutpat. Suspendisse nulla tortor, malesuada sit amet leo vel, posuere sagittis dolor. Morbi bibendum enim ut lobortis porttitor. Donec quis sagittis arcu, eu mollis velit.</p>
+<p class="aboutText">Pellentesque quis massa posuere, placerat eros eu, sollicitudin lectus. Cras eu faucibus nisi. Vivamus nec consectetur nibh, quis ultrices eros. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Pellentesque sollicitudin mauris nibh, sit amet luctus ante tristique sagittis. In mi libero, maximus quis lorem ut, euismod placerat elit. Sed vitae nibh tortor. Nunc ac nisl ut quam pulvinar gravida at id augue. Quisque tincidunt sapien a libero lacinia, vitae aliquam ligula imperdiet.</p>
+<p class="aboutText">Morbi sed mi eget turpis accumsan aliquam et id nibh. Nulla eget rhoncus odio. Mauris cursus, risus id varius ullamcorper, arcu neque mattis lacus, vitae consectetur enim dui ut ex. Morbi sit amet aliquet ipsum. Etiam imperdiet ligula a dignissim iaculis. Mauris eu eros a neque aliquam blandit vitae pulvinar nunc. Praesent interdum, felis eu euismod elementum, libero lectus tristique neque, quis dignissim velit augue ut metus.</p>
+		</div>
 	</div>
 
 	<div id="loaderBack">
@@ -964,9 +1046,15 @@ function onImageLoaded () {
 };
 
 function hideMapInitial() {
-	//$('#mapImgInitial').animate({ 'height': '500vh' }, 'slow');
 	$('#mapInitialBack').fadeOut(SPLASH_FADE_SPEED);
 	$('#mapImgInitial').fadeOut(SPLASH_FADE_SPEED);
+
+	hideAbout();
+}
+
+function backToMapInitial() {
+	$('#mapInitialBack').fadeIn(SPLASH_FADE_SPEED);
+	$('#mapImgInitial').fadeIn(SPLASH_FADE_SPEED);	
 }
 
 function fadeOutLoader () {
@@ -1021,6 +1109,16 @@ function hideDialog() {
 function dialogBlocker(e) {
 	e = e || window.event;
     e.stopPropagation();
+}
+
+// about
+
+function showAbout() {
+	$('#aboutHolder').animate({ left : '0px' }, 400);
+}
+
+function hideAbout() {
+	$('#aboutHolder').animate({ left : '-483px' }, 400);
 }
 
 // pulse stuff
