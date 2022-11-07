@@ -5,11 +5,11 @@
 <head>
 	<title>JR</title>
 
-	<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-	<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-	<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-	<link rel="manifest" href="/site.webmanifest">
-	<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+	<link rel="apple-touch-icon" sizes="180x180" href="./apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="./favicon-16x16.png">
+	<link rel="manifest" href="./site.webmanifest">
+	<link rel="mask-icon" href="./safari-pinned-tab.svg" color="#5bbad5">
 	<meta name="msapplication-TileColor" content="#da532c">
 	<meta name="theme-color" content="#ffffff">
 
@@ -25,14 +25,13 @@
 	    @font-face {
 		    font-family: 'Myriad Pro Bold Condensed';
 		    font-style: normal;
-		    font-weight: normal;
+		    font-weight: 800;
 		    src: local('Myriad Pro Bold Condensed'), url('./assets/fonts/MYRIADPRO-BOLDCOND.woff') format('woff');
 	    }
 
         @font-face {
 			font-family: 'Myriad Pro Condensed';
 			font-style: normal;
-			font-weight: normal;
 			src: local('Myriad Pro Condensed'), url('./assets/fonts/MYRIADPRO-COND.woff') format('woff');
 		}  
 
@@ -45,6 +44,8 @@
 			margin:0;
 			border:0;
 		}
+
+		* {-webkit-font-smoothing: antialiased;}
 
 		#map-container {
 			height: 100vh;
@@ -103,7 +104,7 @@
 			font-family: "Myriad Pro Condensed";
 			position: absolute;
 			top: 30px;
-			left: 397px;
+			left: 383px;
 			font-size: 26pt;
 		}
 
@@ -119,9 +120,9 @@
 		#aboutHolder {
 			position: absolute;
 			top: 0;
-			left: -483px;
+			left: -468px;
 			height: 100vh;
-			width: 478px;
+			width: 463px;
 			border-right: 5px solid #CCC;
 			background-color: white;
 			color: black;
@@ -131,7 +132,7 @@
 			font-family: "Myriad Pro Condensed";
 			font-size: 26pt;
 			position: relative;
-			left: 395px; 
+			left: 381px; 
 			top: 36px;
 			pointer-events: none;
 		}
@@ -712,7 +713,7 @@
 
 	<div id="mapInitialBack">
 		<img id="mapImgInitial" onclick="hideAbout()" src="./assets/images/map.png" />
-		<h1 id="mapTitleText">NEW BELGRADE MAP</h1>
+		<b><h1 id="mapTitleText">NEW BELGRADE MAP</h1></b>
 		<p id="navItems"><span class="navItem" onclick="showAbout()">ABOUT</span><span class="navItemSeparator"><b> | </b></span><span class="navItem" onclick="hideMapInitial()">EXPLORE</span></p>
 		<div id="aboutHolder">
 			<h2 id="aboutTitle">ABOUT</h2>
@@ -1118,7 +1119,7 @@ function showAbout() {
 }
 
 function hideAbout() {
-	$('#aboutHolder').animate({ left : '-483px' }, 400);
+	$('#aboutHolder').animate({ left : '-468px' }, 400);
 }
 
 // pulse stuff
